@@ -14,65 +14,82 @@
     }
 
     body {
-      background: linear-gradient(135deg, #e3f2fd, #ffffff);
+      background: linear-gradient(135deg, #e0f7fa, #fff);
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
-      height: 100vh;
+      align-items: center;
+      min-height: 100vh;
       padding: 20px;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      padding: 30px;
       text-align: center;
+      animation: fadeIn 1s ease-in-out;
     }
 
     h1 {
-      color: #1a237e;
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-    }
-
-    p {
-      color: #333;
-      font-size: 1.2rem;
+      font-size: 1.8rem;
+      color: #004d40;
       margin-bottom: 15px;
     }
 
-    button {
-      background-color: #1a73e8;
+    p {
+      color: #444;
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .buy-button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 1rem;
+      background-color: #00796b;
       color: white;
       border: none;
-      padding: 15px 30px;
-      font-size: 1rem;
       border-radius: 8px;
       cursor: pointer;
       transition: background 0.3s ease, transform 0.2s ease;
     }
 
-    button:hover {
-      background-color: #0c52c2;
+    .buy-button:hover {
+      background-color: #004d40;
       transform: scale(1.05);
     }
 
-    @media (max-width: 600px) {
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 20px;
+      }
+
       h1 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
       }
 
       p {
-        font-size: 1rem;
-      }
-
-      button {
-        padding: 12px 24px;
+        font-size: 0.95rem;
       }
     }
   </style>
 </head>
 <body>
-  <h1>🔥 Limited Time Offer: Oyster Bamboo Rod</h1>
-  <p>Grab this premium bamboo rod, crafted for fishing enthusiasts and collectors.</p>
-  <p><strong>Payment Accepted:</strong> Only USDT</p>
-  <button onclick="window.location.href='https://your-usdt-payment-gateway.com'">
-    Buy Now
-  </button>
-</body>
-</html>
+  <div class="card">
+    <h1>🎣 Premium Oyster Bamboo Rod</h1>
+    <p>Elegant. Handcrafted. Durable.</p>
+    <p>Only <strong>USDT</strong> accepted. Grab it before it's gone!</p>
+    <button class="buy-button" onclick="wi
