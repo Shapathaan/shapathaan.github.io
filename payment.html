@@ -16,15 +16,21 @@
     h1 {
       color: #00695c;
       font-size: 2rem;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
+    }
+
+    .desc {
+      font-size: 1.05rem;
+      color: #333;
+      margin-bottom: 25px;
     }
 
     .price-box {
-      margin-top: 20px;
       background-color: #e0f7fa;
       padding: 15px;
       border-radius: 12px;
       display: inline-block;
+      margin-bottom: 25px;
     }
 
     .price-box p {
@@ -41,25 +47,35 @@
       font-weight: bold;
     }
 
-    .image-box {
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
       margin: 30px 0;
       animation: float 2s ease-in-out infinite;
     }
 
-    .image-box img {
-      max-width: 250px;
+    .image-gallery img {
+      width: 220px;
       border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .image-gallery img:hover {
+      transform: scale(1.05);
     }
 
     .qr-code {
-      margin-top: 20px;
+      margin-top: 30px;
     }
 
     .qr-code img {
-      max-width: 180px;
+      max-width: 200px;
       border: 3px solid #00796b;
       border-radius: 10px;
-      padding: 5px;
+      padding: 6px;
     }
 
     @keyframes float {
@@ -67,14 +83,19 @@
       50% { transform: translateY(-10px); }
       100% { transform: translateY(0px); }
     }
+
+    @media (max-width: 600px) {
+      .image-gallery img {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>Make USDT Payment</h1>
 
-  <div class="image-box">
-    <img src="https://i.ibb.co/GHgv1G0/oyster-rod.gif" alt="Oyster Bamboo Rod" />
-  </div>
+  <h1>Make USDT Payment</h1>
+  <p class="desc">Oyster Bamboo Fly Rod 7' 9" 5wt Master series for sale</p>
 
   <div class="price-box">
     <p>Original Price: <span>$5644.99 USDT</span></p>
@@ -82,9 +103,16 @@
     <p>Offer valid till <strong>25th June</strong></p>
   </div>
 
-  <div class="qr-code">
-    <p>Scan USDT Address:</p>
-    <img src="https://i.ibb.co/Lz1N0TS/usdt-qr.png" alt="USDT QR Code" />
+  <div class="image-gallery">
+    <img src="https://i.ibb.co/GHgv1G0/oyster-rod.gif" alt="Animated Bamboo Rod" />
+    <img src="https://i.ibb.co/9wNhq7C/rod1.jpg" alt="Rod Photo 1" />
+    <img src="https://i.ibb.co/mFjsdPb/rod2.jpg" alt="Rod Photo 2" />
   </div>
+
+  <div class="qr-code">
+    <p>Scan to Pay with USDT:</p>
+    <img src="https://i.ibb.co/YXxKNbG/my-scanner.png" alt="Your QR Code" />
+  </div>
+
 </body>
 </html>
